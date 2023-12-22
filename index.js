@@ -1,6 +1,12 @@
 const canvas = document.getElementById('drawingCanvas');
     const ctx = canvas.getContext('2d');
-
+    function resizeCanvas() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+      window.addEventListener('load', resizeCanvas);
+      window.addEventListener('resize', resizeCanvas);
+      
     let currentColor = 'black';
     let lineWidth = 5;
 
